@@ -9,11 +9,11 @@
 script = ExtResource("1_pyyt2")
 
 [node name="SpaceLayer" type="ParallaxLayer" parent="."]
-position = Vector2(0, 1)
+motion_mirroring = Vector2(0, 240)
 
 [node name="Space" type="TextureRect" parent="SpaceLayer"]
 offset_right = 160.0
-offset_bottom = 239.0
+offset_bottom = 240.0
 texture = ExtResource("1_r032m")
 stretch_mode = 1
 
