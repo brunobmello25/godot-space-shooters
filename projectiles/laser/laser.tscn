@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://btawb6q6oul7e"]
 
-[ext_resource type="Script" path="res://scenes/projectiles/laser/laser.gd" id="1_wr0ph"]
+[ext_resource type="Script" path="res://projectiles/laser/laser.gd" id="1_wr0ph"]
 [ext_resource type="Texture2D" uid="uid://bwrrpocs2dgsk" path="res://assets/laser_small.png" id="2_bk140"]
 [ext_resource type="Script" path="res://components/move.gd" id="3_fp6q3"]
 [ext_resource type="Script" path="res://components/scale.gd" id="4_70nl4"]
