@@ -1,6 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxgqf1h62jexd"]
+[gd_scene load_steps=10 format=3 uid="uid://cxgqf1h62jexd"]
 
 [ext_resource type="Texture2D" uid="uid://blch34xqajpk2" path="res://assets/ship.png" id="1_ibxgk"]
+[ext_resource type="Script" path="res://components/move.gd" id="2_8i2xl"]
+[ext_resource type="Script" path="res://components/move_input.gd" id="3_kacle"]
+[ext_resource type="Resource" uid="uid://b84xyxhuawutp" path="res://scenes/ship/ship_move_stats.tres" id="4_04ec1"]
+[ext_resource type="Script" path="res://components/position_clamp.gd" id="5_0icrk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3arjd"]
 atlas = ExtResource("1_ibxgk")
@@ -46,3 +50,16 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0maqo")
 animation = &"center"
+
+[node name="MoveComponent" type="Node" parent="." node_paths=PackedStringArray("actor")]
+script = ExtResource("2_8i2xl")
+actor = NodePath("..")
+
+[node name="MoveInputComponent" type="Node" parent="." node_paths=PackedStringArray("move_component")]
+script = ExtResource("3_kacle")
+move_stats = ExtResource("4_04ec1")
+move_component = NodePath("../MoveComponent")
+
+[node name="PositionClampComponent" type="Node2D" parent="." node_paths=PackedStringArray("actor")]
+script = ExtResource("5_0icrk")
+actor = NodePath("..")
