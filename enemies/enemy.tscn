@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7kd6kul740as"]
+[gd_scene load_steps=10 format=3 uid="uid://c7kd6kul740as"]
 
 [ext_resource type="Script" path="res://enemies/enemy.gd" id="1_bodd2"]
 [ext_resource type="Script" path="res://components/move.gd" id="1_r7rgl"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://components/shake.gd" id="5_2no3j"]
 [ext_resource type="Script" path="res://components/hitbox.gd" id="7_850cp"]
 [ext_resource type="Script" path="res://components/hurtbox.gd" id="8_7qw73"]
+[ext_resource type="Script" path="res://components/hurt.gd" id="9_8ypvv"]
 
 [node name="Enemy" type="Node2D"]
 script = ExtResource("1_bodd2")
@@ -43,3 +44,8 @@ script = ExtResource("7_850cp")
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("8_7qw73")
+
+[node name="HurtComponent" type="Node" parent="." node_paths=PackedStringArray("stats_component", "hurtbox_component")]
+script = ExtResource("9_8ypvv")
+stats_component = NodePath("../StatsComponent")
+hurtbox_component = NodePath("../HurtboxComponent")
