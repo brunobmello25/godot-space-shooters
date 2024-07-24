@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://ceomhms682amk"]
+[gd_scene load_steps=3 format=3 uid="uid://ceomhms682amk"]
 
 [ext_resource type="PackedScene" uid="uid://cxgqf1h62jexd" path="res://scenes/ship/ship.tscn" id="1_6nyx5"]
+[ext_resource type="PackedScene" uid="uid://baq2pqaolj0e8" path="res://effects/space_background.tscn" id="2_qv32s"]
 
 [node name="World" type="Node2D"]
 
 [node name="Ship" parent="." instance=ExtResource("1_6nyx5")]
 position = Vector2(80, 216)
+
+[node name="SpaceBackground" parent="Ship" instance=ExtResource("2_qv32s")]
