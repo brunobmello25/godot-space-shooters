@@ -9,8 +9,6 @@
 [node name="Ship" parent="." instance=ExtResource("1_detqh")]
 position = Vector2(80, 216)
 
-[node name="SpaceBackground" parent="Ship" instance=ExtResource("2_63kdx")]
-
 [node name="GreenEnemy" parent="." instance=ExtResource("3_te8c3")]
 position = Vector2(29, 29)
 
@@ -19,3 +17,5 @@ position = Vector2(116, 31)
 
 [node name="GreenEnemy3" parent="." instance=ExtResource("3_te8c3")]
 position = Vector2(78, 76)
+
+[node name="SpaceBackground" parent="." instance=ExtResource("2_63kdx")]
