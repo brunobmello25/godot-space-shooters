@@ -8,6 +8,7 @@ extends Node2D
 @onready var ship_sprite = $Anchor/ShipSprite
 @onready var flame_sprite = $Anchor/FlameSprite
 @onready var move_component = $MoveComponent
+@onready var variable_pitch_audio_stream_player = $VariablePitchAudioStreamPlayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -22,6 +23,7 @@ func _process(_delta):
 
 
 func fire_lasers() -> void:
+	variable_pitch_audio_stream_player.play_with_variance()
 	spawner_component.spawn(left_muzzle.global_position)
 	spawner_component.spawn(right_muzzle.global_position)
 	scale_component.tween_scale()
